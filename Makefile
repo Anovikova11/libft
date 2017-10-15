@@ -34,7 +34,7 @@ BONUS = ft_lstnew.c ft_lstdelone.c ft_lstdel.c\
 
 OTHER = ft_word_count.c ft_word_len.c ft_fill_array.c ft_isspace.c ft_end.c
 
-FILES = $(PART1) $(PART2) $(OTHER)
+FILES = $(PART1) $(PART2) $(BONUS) $(OTHER)
 
 OBJ = $(FILES:.c=.o)
 

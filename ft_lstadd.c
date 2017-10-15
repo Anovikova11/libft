@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alnoviko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/19 12:40:12 by alnoviko          #+#    #+#             */
-/*   Updated: 2017/09/19 13:10:47 by alnoviko         ###   ########.fr       */
+/*   Created: 2017/10/14 14:56:26 by alnoviko          #+#    #+#             */
+/*   Updated: 2017/10/14 15:00:08 by alnoviko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	size_t i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	new->next = *alst;
+	*alst = new;
 }

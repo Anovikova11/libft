@@ -53,7 +53,11 @@ char				*ft_strnew(size_t size);
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_memalloc(size_t size);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char				*ft_strmap(char const *s, char (*f)(char));
+int					ft_strnequ(char const *s1, char const *s2, size_t n);
+int					ft_strequ(char const *s1, char const *s2);
 int					ft_atoi(const char *str);
+char				*ft_itoa(int n);
 int					ft_isspace(int c);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
@@ -61,5 +65,11 @@ int					ft_word_count(char const *s, char c);
 int					ft_word_len(char const *s, char c, int i);
 int					ft_end(char const *s, int i);
 char				**ft_fill_array(char **s1, const char *s, char c);
+t_list				*ft_lstnew(void const *content, size_t content_size);
+void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstdel(t_list **alst, void(*del)(void *, size_t));
+void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif

@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alnoviko <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/19 12:40:12 by alnoviko          #+#    #+#             */
-/*   Updated: 2017/09/19 13:10:47 by alnoviko         ###   ########.fr       */
+/*   Created: 2017/10/14 15:33:06 by alnoviko          #+#    #+#             */
+/*   Updated: 2017/10/14 15:53:08 by alnoviko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** 1. Create a new_node, it's a new head.
+** 2. Del previous node and free it.
+** 3. Repeat.
+** 4. Make last one NULL.
+*/
+
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	size_t i;
+	t_list	*new_node;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	while (*alst)
+	{
+		new_node = (*alst)->next;
+		ft_lstdelone(alst, del);
+		*alst = new_node;
+	}
 }
