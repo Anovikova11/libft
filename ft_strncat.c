@@ -10,23 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The strncat() function appends not more than n characters from s2
+** to the end of s1, then adds a terminating `\0'. Returns the pointer s1.
+*/
+
 #include "libft.h"
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
+	size_t	c;
 
 	i = 0;
 	j = 0;
-	while (dest[i])
+	c = 0;
+	while (dest[i] != '\0')
 		i++;
-	while (src[j] && n > 0)
+	while ((src[j] != '\0') && (c < n))
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
-		n--;
+		c++;
 	}
 	dest[i] = '\0';
 	return (dest);

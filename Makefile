@@ -6,7 +6,7 @@
 #    By: alnoviko <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/09 18:45:02 by alnoviko          #+#    #+#              #
-#    Updated: 2017/10/09 18:45:20 by alnoviko         ###   ########.fr        #
+#    Updated: 2017/10/16 16:02:55 by alnoviko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ PART2 = ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c ft_strclr.c\
 BONUS = ft_lstnew.c ft_lstdelone.c ft_lstdel.c\
 		ft_lstadd.c ft_lstiter.c ft_lstmap.c
 
-OTHER = ft_word_count.c ft_word_len.c ft_fill_array.c ft_isspace.c ft_end.c
+OTHER = ft_word_count.c ft_word_len.c ft_fill_array.c ft_isspace.c\
+		ft_digit_count.c
 
 FILES = $(PART1) $(PART2) $(BONUS) $(OTHER)
 
